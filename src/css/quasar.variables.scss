@@ -1,0 +1,60 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+$primary: #1976d2;
+$secondary: #26a69a;
+$accent: #9c27b0;
+
+$dark: #1d1d1d;
+$dark-page: #121212;
+
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+// Adicional
+
+@font-face {
+  font-family: 'season';
+  src: url('../assets/fonts/font-1.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'season';
+  src: url('../assets/fonts/font-1-cursive.woff') format('woff');
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'season Fallback'; /* Las comillas son importantes si el nombre tiene espacios */
+  src: local('Arial'); /* Aquí usas Arial como fuente local de respaldo */
+  ascent-override: 102.85%;
+  descent-override: 26.79%;
+  line-gap-override: 0%;
+  size-adjust: 94.8%; /* Estos ajustes ayudan a igualar las métricas de la fuente de respaldo */
+}
+
+/*
+  Tu variable CSS personalizada para la pila de fuentes.
+  Esto es muy útil para reutilizar la configuración de la fuente fácilmente.
+*/
+:root {
+  --font-season: 'season', 'season Fallback', sans-serif;
+  --main-text-color: rgb(17, 17, 17);
+  --sub-text-color: #848484;
+}
