@@ -154,7 +154,7 @@ html {
 #footer {
   position: relative; /* Importante para que el video posicionado absolutamente se refiera a este contenedor */
   width: 100%;
-  height: 300px; /* O la altura que desees para tu footer, puede ser vw o vh también */
+  height: 20vw; /* O la altura que desees para tu footer, puede ser vw o vh también */
   overflow: hidden;
   padding: 5vw;
 
@@ -207,6 +207,7 @@ html {
         gap: 2vw;
         a {
           text-decoration: none;
+          font-size: 1vw;
           cursor: pointer;
           color: rgba(255, 255, 255, 0.8);
         }
