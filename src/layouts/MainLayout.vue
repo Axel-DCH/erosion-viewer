@@ -1,6 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <Analytics />
     <div id="playout">
       <div id="pnav">
         <div id="pnav-box">
@@ -51,7 +50,6 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { Analytics } from '@vercel/analytics/react';
 
 const router = useRouter();
 
