@@ -17,6 +17,7 @@
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "@types/ol": "^6.5.3",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.2.1",
     "georaster": "^1.6.0",
     "georaster-layer-for-leaflet": "^3.10.0",
