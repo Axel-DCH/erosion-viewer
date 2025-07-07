@@ -8,7 +8,7 @@
               <img src="media/logo/logo.PNG" alt="logo" @click="goHomeApp" />
             </a>
             <a @click="goHomeApp">Erosion Viewer</a>
-            <a @click="goHomeApp">Research</a>
+            <a @click="goResearchPage">Research</a>
             <a @click="goTeamPage">About</a>
           </div>
           <div id="preview">
@@ -30,7 +30,7 @@
         <div id="nav-1">
           <div class="npage">
             <a @click="goHomeApp">Home</a>
-            <a href="">Research</a>
+            <a @click="goResearchPage">Research</a>
             <a @click="goTeamPage">About</a>
             <a href="mailto:cuadroshuachua2800@gmail.com">Contact me</a>
           </div>
@@ -61,6 +61,14 @@ const goHomeApp = async () => {
   }
 };
 
+const goResearchPage = async () => {
+  try {
+    await router.push('/research');
+  } catch (error) {
+    console.log('Error de navegación a /home', error);
+  }
+};
+
 const goTeamPage = async () => {
   try {
     await router.push('/team');
@@ -76,6 +84,8 @@ const goPreviewApp = async () => {
     console.log('Error de navegación a /preview', error);
   }
 };
+
+localStorage.setItem('reload-preview', 'false');
 </script>
 
 <style lang="scss" scoped>

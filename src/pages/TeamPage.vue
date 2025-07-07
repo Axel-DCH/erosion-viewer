@@ -2,24 +2,30 @@
   <q-page class="flex">
     <div id="tm-cont">
       <div class="tm-title">
-        <p class="title-text">About the creator</p>
+        <p class="title-text">Team</p>
 
         <p class="mid-text">
-          I'm <span>Axel Cuadros</span>, the sole developer and visionary behind
-          <span>Erosion Viewer</span>.
+          I'm <span>Axel Cuadros</span>, the developer and creator of <span>Erosion Viewer</span>, a
+          system built with the goal of effective soil erosion prediction.
         </p>
 
         <p class="mid-text">
-          Drawing on months of dedicated research in
+          This project would not have been possible without the invaluable guidance and mentorship
+          of my thesis advisor, <span>Marks Calderón</span>, whose support was instrumental
+          throughout the research and development process.
+        </p>
+
+        <p class="mid-text">
+          Together, we explored and applied months of research in
           <span>deep learning, neural networks (U-Net), and advanced satellite image analysis</span
-          >, I personally built this system to deliver effective soil erosion prediction. I've
-          handled every aspect of its development, from the
-          <span>machine learning models to the full-stack website</span>.
+          >. While I led the technical development—covering everything from the
+          <span>machine learning models to the full-stack web implementation</span>—his insights and
+          academic perspective were key to shaping the system's direction and scientific rigor.
         </p>
 
         <p class="mid-text">
-          My core belief is that a highly specialized, focused system can yield exceptional results
-          in soil erosion analysis.
+          Our shared belief is that a highly specialized, focused system can yield exceptional
+          results in soil erosion analysis.
         </p>
       </div>
 
@@ -44,9 +50,10 @@
         <p class="title-text-sub">Research</p>
 
         <p class="mid-text">
-          I focus on deep and innovative machine learning research for environmental prediction,
-          primarily using Earth observation data. My work centers on developing advanced models to
-          understand and forecast complex environmental phenomena.
+          Together with my thesis advisor, <span>Marks Calderón</span>, I focus on deep and
+          innovative machine learning research for environmental prediction, primarily using Earth
+          observation data. Our work centers on developing advanced models to understand and
+          forecast complex environmental phenomena.
         </p>
 
         <p class="mid-text">Core Research Areas:</p>
@@ -68,7 +75,7 @@
         </div>
 
         <p class="mid-text">
-          Read more about the research in <a href="">Soil Erosion Prediction</a>.
+          Read more about the research in <a @click="goResearchPage">Soil Erosion Prediction</a>.
         </p>
       </div>
 
@@ -100,7 +107,19 @@
   </q-page>
 </template>
 
-<script lang="ts"></script>
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goResearchPage = async () => {
+  try {
+    await router.push('/research');
+  } catch (error) {
+    console.log('Error de navegación a /home', error);
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 #tm-cont {
